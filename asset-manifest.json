@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.60c8e951.css",
+    "main.js": "/static/js/main.eb55f9d1.js",
+    "static/js/453.ffad2c40.chunk.js": "/static/js/453.ffad2c40.chunk.js",
+    "static/media/selection-game-bg.mp3": "/static/media/selection-game-bg.c84a5035293efd3820ed.mp3",
+    "static/media/Untangle-Graph-gif.gif": "/static/media/Untangle-Graph-gif.4e19530d72f6268abab4.gif",
+    "static/media/Insertion-bg.mp3": "/static/media/Insertion-bg.883b82ba8249190cfe8a.mp3",
+    "static/media/queue-game-bg.mp3": "/static/media/queue-game-bg.176e67015c21456a7391.mp3",
+    "static/media/quiz-bg.jpg": "/static/media/quiz-bg.04bd5174feafb39b752a.jpg",
+    "static/media/stack-of-plates.gif": "/static/media/stack-of-plates.e06e840ce49c3e0fde2b.gif",
+    "static/media/Stack-game-bg.mp3": "/static/media/Stack-game-bg.346a6ff2bb75c97a2c88.mp3",
+    "static/media/creek-swimming-bg.mp3": "/static/media/creek-swimming-bg.1ee47cbbadc651e5d2bc.mp3",
+    "static/media/queue-animation.gif": "/static/media/queue-animation.2b68df47998146438802.gif",
+    "static/media/cute-level-up-queuegame.mp3": "/static/media/cute-level-up-queuegame.f31ed105652cb5a8839b.mp3",
+    "static/media/coral (2).png": "/static/media/coral (2).7c3049c2d6d15327be59.png",
+    "static/media/treasure-chest.png": "/static/media/treasure-chest.6496a55b9344eff7efbf.png",
+    "static/media/new-email-queue.mp3": "/static/media/new-email-queue.a783c3633e1061037999.mp3",
+    "static/media/coral (1).png": "/static/media/coral (1).0f0f8a8e3a851bde7a77.png",
+    "static/media/gold.png": "/static/media/gold.ad8837e6831e380044bf.png",
+    "static/media/treasure.png": "/static/media/treasure.abd7985b65c7308ea33c.png",
+    "static/media/coral-reef.png": "/static/media/coral-reef.26777b9f558685159d2e.png",
+    "static/media/oyster.png": "/static/media/oyster.8a82429e7a5ca413c3fe.png",
+    "static/media/reef.png": "/static/media/reef.7e1ad0921f3be75f9451.png",
+    "static/media/bubble-swap.mp3": "/static/media/bubble-swap.506aa648dae47427d48f.mp3",
+    "static/media/pearls.png": "/static/media/pearls.a539136fafd821fd565f.png",
+    "static/media/pearl.png": "/static/media/pearl.778b08f48bb099e76c0a.png",
+    "static/media/clam.png": "/static/media/clam.7b270e77d1074cccf3b7.png",
+    "static/media/coral.png": "/static/media/coral.0eb90b749a3f636fd650.png",
+    "static/media/bubble-burst.mp3": "/static/media/bubble-burst.96c9930542913c43ac59.mp3",
+    "static/media/Insertion-card-drop.mp3": "/static/media/Insertion-card-drop.c45d9c5fc804dc7a8e75.mp3",
+    "static/media/Depth-First-Search-gif.gif": "/static/media/Depth-First-Search-gif.a03c07b1db991d16679c.gif",
+    "static/media/Breadth-First-Search-gif.gif": "/static/media/Breadth-First-Search-gif.ce715ca92ed78b502139.gif",
+    "index.html": "/index.html",
+    "main.60c8e951.css.map": "/static/css/main.60c8e951.css.map",
+    "main.eb55f9d1.js.map": "/static/js/main.eb55f9d1.js.map",
+    "453.ffad2c40.chunk.js.map": "/static/js/453.ffad2c40.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60c8e951.css",
+    "static/js/main.eb55f9d1.js"
+  ]
+}
