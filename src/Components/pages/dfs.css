@@ -1,0 +1,376 @@
+.dfs-graph-visualization {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 20px; /* Added to shift content left */
+}
+
+.dfs-graph-visualization-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0; /* Reduced from 30px to 0 */
+}
+
+.dfs-graph-visualization-header h2 {
+    font-size: 2.2em;
+    color: #333;
+    text-align: left;
+    margin: 0;
+}
+
+.dfs-graph-right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap for closer spacing */
+}
+
+.dfs-graph-visualization-content {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    min-height: 500px;
+    margin-top: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.dfs-graph-canvas-section {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 640px;  /* Canvas height + padding */
+}
+
+.dfs-graph-canvas-wrapper {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dfs-graph-canvas-wrapper canvas {
+    width: 600px !important;
+    height: 600px !important;
+}
+
+.dfs-graph-algorithm-box {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+    position: static;
+    margin-bottom: 10px; /* Add small margin at bottom */
+}
+
+.dfs-graph-complexity-box {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px; /* Reduced from 20px */
+    min-width: 400px;
+    height: 180px; /* Reduced from 200px */
+    width: 100%;
+    box-sizing: border-box;
+    position: static;
+}
+
+.dfs-graph-complexity-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.dfs-graph-complexity-box table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1em;
+}
+
+.dfs-graph-complexity-box th,
+.dfs-graph-complexity-box td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.dfs-graph-complexity-box th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Remove the display: none from complexity box styles */
+.dfs-graph-complexity-box,
+.dfs-graph-complexity-box h3,
+.dfs-graph-complexity-box table,
+.dfs-graph-complexity-box th,
+.dfs-graph-complexity-box td {
+    display: revert;
+}
+
+/* Adjust responsive design */
+@media (max-width: 768px) {
+    .dfs-graph-visualization-content {
+        grid-template-columns: 1fr;
+    }
+
+    .dfs-graph-visualization-header {
+        flex-direction: column;
+    }
+
+    .dfs-control-buttons {
+        flex-direction: column;
+    }
+
+    .dfs-graph-right-section {
+        gap: 10px; /* Consistent spacing on smaller screens */
+    }
+
+    .dfs-graph-algorithm-box,
+    .dfs-graph-complexity-box {
+        min-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* DFS-specific styles */
+.dfs-node {
+    fill: #2196F3;
+    stroke: #000;
+    stroke-width: 2;
+}
+
+.dfs-node.current {
+    fill: #4CAF50;
+}
+
+.dfs-node.visited {
+    fill: #2196F3;
+}
+
+.dfs-node.unvisited {
+    fill: #ccc;
+}
+
+.dfs-edge {
+    stroke: #000;
+    stroke-width: 2;
+}
+
+.dfs-text {
+    fill: #fff;
+    font-size: 16px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.dfs-graph-sequence-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dfs-graph-sequence-display h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.dfs-graph-sequence-display p {
+    font-family: monospace;
+    font-size: 14px;
+    color: #666;
+    word-break: break-all;
+}
+
+/* Add styles for tree sequence */
+.dfs-graph-tree-sequence {
+    margin-top: 10px; /* Reduce top margin */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.dfs-graph-tree-sequence.visible {
+    display: block; /* Show when has content */
+}
+
+.dfs-graph-tree-structure {
+    font-family: monospace;
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: calc(100% - 50px); /* Account for header */
+    overflow-y: auto;
+}
+
+.dfs-graph-tree-structure div {
+    line-height: 1.5;
+    padding: 2px 0;
+}
+
+/* Add highlight class for algorithm steps */
+.dfs-graph-highlight {
+    background-color: #ffeb3b;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Add styles for buttons */
+.dfs-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.dfs-control-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.dfs-control-buttons button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.dfs-control-buttons button:hover {
+    background-color: #45a049;
+}
+
+.dfs-control-buttons button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.dfs-control-buttons button:nth-child(2) {
+    background-color: #2196F3;
+}
+
+.dfs-control-buttons button:nth-child(2):hover {
+    background-color: #0b7dda;
+}
+
+.dfs-control-buttons button:nth-child(3),
+.dfs-control-buttons button:nth-child(4) {
+    background-color: #FF9800;
+}
+
+.dfs-control-buttons button:nth-child(3):hover,
+.dfs-control-buttons button:nth-child(4):hover {
+    background-color: #e68a00;
+}
+
+/* Custom Graph Form Styles */
+.dfs-custom-graph-form {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dfs-custom-graph-form h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.dfs-form-group {
+    margin-bottom: 15px;
+}
+
+.dfs-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.dfs-form-group input,
+.dfs-form-group textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.dfs-form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.dfs-error-message {
+    color: #dc3545;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.dfs-custom-graph-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.dfs-custom-graph-form button:hover {
+    background-color: #45a049;
+}
+
+.dfs-form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dfs-clear-button {
+    background-color: #f44336 !important;
+}
+
+.dfs-clear-button:hover {
+    background-color: #d32f2f !important;
+} 

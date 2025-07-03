@@ -1,0 +1,398 @@
+.select-game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .select-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .title-emoji {
+    font-size: 2.8rem;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .select-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(45deg, #0066cc, #00ccff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  .select-title::before,
+  .select-title::after {
+    display: none;
+  }
+  
+  .mute-button {
+    position: absolute;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .mute-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .select-game-layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1300px;
+    gap: 0;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .select-canvas-wrapper {
+    flex: 0 0 auto;
+    width: 1000px;
+    padding-right: 0;
+  }
+  
+  .select-algorithm-panel {
+    min-width: 400px;
+    min-height: 600px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    margin-left: 50px;
+    border-left: 1px solid #eee;
+  }
+  
+  .select-algorithm-title {
+    color: #333;
+    font-size: 1.4em;
+    margin: 0 0 15px 0;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .select-algorithm-code {
+    background-color: #f5f5f5;
+    color: #333;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    font-family: 'Courier New', monospace;
+    line-height: 1.5;
+  }
+  
+  .select-algorithm-code pre {
+    margin: 0;
+    white-space: pre-wrap;
+    font-size: 16px;
+  }
+  
+  .select-algorithm-code .highlight {
+    background-color: #e6f7ff;
+    color: #0066cc;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin: 5px 0;
+    border-left: 4px solid #0066cc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .select-algorithm-code .highlight:before {
+    content: "→";
+    position: absolute;
+    left: 8px;
+    color: #0066cc;
+  }
+  
+  .select-algorithm-code .highlight:hover {
+    background-color: #d1e9ff;
+    transform: translateX(2px);
+  }
+  
+  .select-algorithm-explanation {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    border-left: 4px solid #007bff;
+  }
+  
+  .select-algorithm-explanation p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .select-info-panel {
+    width: 1000px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .select-message {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .select-score {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .select-difficulty {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .select-badge {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .select-package-info {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .select-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .select-reset-button {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .select-reset-button:hover {
+    background-color: #ff5252;
+  }
+  
+  .select-next-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .select-next-button:hover {
+    background-color: #45a049;
+  }
+  
+  .select-difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .select-difficulty-button {
+    padding: 8px 16px;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+  }
+  
+  .select-difficulty-button:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .select-difficulty-button.active {
+    background-color: #2196f3;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .select-difficulty-button.locked {
+    background-color: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+    opacity: 0.7;
+    position: relative;
+  }
+  
+  .select-difficulty-button.locked:hover {
+    background-color: #cccccc;
+  }
+  
+  .lock-icon {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 14px;
+  }
+  
+  /* Add a visual indicator for unlocked stages */
+  .select-difficulty-button:not(.locked)::after {
+    content: "✓";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    color: #4caf50;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Add a transition effect for unlocking */
+  @keyframes unlockAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .select-difficulty-button:not(.locked):hover {
+    animation: unlockAnimation 0.5s ease-in-out;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1600px) {
+    .select-game-layout {
+      flex-direction: column;
+    }
+    
+    .select-algorithm-panel {
+      width: 100%;
+    }
+    
+    .select-algorithm-code pre {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 1050px) {
+    .select-algorithm-code pre {
+      font-size: 12px;
+    }
+    
+    .select-algorithm-explanation p {
+      font-size: 13px;
+    }
+  }
+  
+  .select-instructions {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .select-instructions-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .select-instructions-content h2 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .select-instructions-content p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .select-press-enter {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,196 @@
+body, html {
+  background: #fff;
+}
+
+.dfs-game-root {
+  min-height: 100vh;
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.dfs-header {
+  margin-top: 0;
+  color: #222;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dfs-controls-bar {
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  gap: 1.5rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: none;
+  padding: 1rem 2rem;
+  align-items: center;
+  z-index: 10;
+}
+.dfs-controls-bar label, .dfs-controls-bar select {
+  color: #222;
+  font-size: 1.1rem;
+}
+.dfs-controls-bar button {
+  background: #283593;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.6rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+}
+.dfs-controls-bar button:hover {
+  background: #1565c0;
+  color: #fff;
+}
+
+.dfs-graph-area {
+  position: relative;
+  width: 90vw;
+  height: 70vh;
+  max-width: 1600px;
+  max-height: 900px;
+  margin: 0;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dfs-graph-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.dfs-node {
+  position: absolute;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: #283593;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  left: 0; top: 0;
+  transform: translate(-50%, -50%);
+  transition: border 0.2s, background 0.2s;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: none;
+}
+.dfs-node-cycle {
+  border: 2px solid #1565c0;
+  background: #1565c0;
+  color: #fff;
+}
+.dfs-node-label {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+.dfs-edge, .dfs-blocked-edge {
+  stroke: #283593;
+  stroke-width: 3;
+  opacity: 1;
+  filter: none;
+  stroke-dasharray: none;
+  animation: none;
+}
+.dfs-blocked-edge {
+  stroke: #FFD600;
+  stroke-width: 4;
+}
+
+.dfs-message {
+  margin: 2rem 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #222;
+  min-height: 2em;
+  text-align: center;
+  text-shadow: none;
+}
+
+.dfs-instructions {
+  font-size: 1.1rem;
+  color: #222;
+  margin-top: 2rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 1.2rem 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: none;
+  text-align: center;
+}
+
+.dfs-node-hint {
+  border: 2px solid #FFD600 !important;
+  background: #FFD600 !important;
+  color: #222 !important;
+  animation: none;
+}
+
+.dfs-legend {
+  color: #222;
+  font-size: 1rem;
+  margin: 0.5rem 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dfs-legend-arrow {
+  display: inline-block;
+  width: 32px;
+  height: 8px;
+  vertical-align: middle;
+}
+
+.dfs-answer-node {
+  border: 2px solid #FFD600 !important;
+  background: #FFD600 !important;
+  color: #222 !important;
+}
+.dfs-answer-edge {
+  stroke: #FFD600 !important;
+  stroke-width: 4 !important;
+}
+
+@media (max-width: 900px) {
+  .dfs-graph-area {
+    width: 98vw;
+    height: 60vw;
+    min-height: 350px;
+    min-width: 98vw;
+  }
+  .dfs-header {
+    font-size: 2rem;
+  }
+  .dfs-node {
+    width: 32px; height: 32px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,309 @@
+/* Sorting Game Menu Styles */
+.sorting-game-menu {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.sorting-game-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+.sorting-game-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+.sorting-game-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.sorting-game-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.sorting-game-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sorting-game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sorting-game-card-image {
+    height: 200px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Bubble Sort Animation */
+.bubble-sort-placeholder {
+    background: linear-gradient(to bottom, #1a2a6c, #4a90e2);
+}
+
+.bubble-animation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.bubble {
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+}
+
+.bubble:nth-child(1) { animation-delay: 0s; }
+.bubble:nth-child(2) { animation-delay: 0.5s; }
+.bubble:nth-child(3) { animation-delay: 1s; }
+.bubble:nth-child(4) { animation-delay: 1.5s; }
+.bubble:nth-child(5) { animation-delay: 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Insertion Sort Animation */
+.insertion-sort-placeholder {
+    background: linear-gradient(to bottom, #b21f1f, #ff6b6b);
+}
+
+.insertion-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+}
+
+.card {
+    width: 20px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    animation: insert 4s ease-in-out infinite;
+}
+
+.card:nth-child(1) { height: 40px; animation-delay: 0s; }
+.card:nth-child(2) { height: 60px; animation-delay: 0.5s; }
+.card:nth-child(3) { height: 30px; animation-delay: 1s; }
+.card:nth-child(4) { height: 50px; animation-delay: 1.5s; }
+.card:nth-child(5) { height: 45px; animation-delay: 2s; }
+
+@keyframes insert {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(10px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(-10px); }
+}
+
+/* Selection Sort Animation */
+.selection-sort-placeholder {
+    background: linear-gradient(to bottom, #fdbb2d, #ffd700);
+}
+
+.selection-animation {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+    padding-bottom: 20px;
+}
+
+.bar {
+    width: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    animation: select 4s ease-in-out infinite;
+}
+
+.bar:nth-child(1) { height: 30px; animation-delay: 0s; }
+.bar:nth-child(2) { height: 60px; animation-delay: 0.5s; }
+.bar:nth-child(3) { height: 40px; animation-delay: 1s; }
+.bar:nth-child(4) { height: 50px; animation-delay: 1.5s; }
+.bar:nth-child(5) { height: 20px; animation-delay: 2s; }
+
+@keyframes select {
+    0%, 100% { background: rgba(255, 255, 255, 0.8); }
+    25% { background: #ff6b6b; }
+    50% { background: rgba(255, 255, 255, 0.8); }
+    75% { background: #ff6b6b; }
+}
+
+.sorting-game-card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sorting-game-card-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.sorting-game-card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.sorting-game-difficulty {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.difficulty-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.difficulty-stars {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.sorting-game-play-button {
+    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #333;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.sorting-game-play-button:hover {
+    background: linear-gradient(90deg, #fad0c4 0%, #ff9a9e 100%);
+}
+
+.sorting-game-info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.sorting-game-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.sorting-game-info ol {
+    padding-left: 1.5rem;
+}
+
+.sorting-game-info li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .sorting-game-options {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sorting-game-title {
+        font-size: 2.5rem;
+    }
+    
+    .sorting-game-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .sorting-game-menu {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sorting-game-title {
+        font-size: 2rem;
+    }
+    
+    .sorting-game-description {
+        font-size: 1rem;
+    }
+    
+    .sorting-game-card-content h2 {
+        font-size: 1.5rem;
+    }
+} 

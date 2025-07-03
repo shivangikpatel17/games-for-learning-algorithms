@@ -1,0 +1,328 @@
+/* src/Components/pages/Datastructure.css */
+
+/* General Page Styling */
+.game-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header Section */
+.game-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.game-header h1 {
+  font-size: 3rem;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.game-header p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Visualization Section */
+.game-visualization {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.animated-stack, .animated-queue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.animated-stack:hover, .animated-queue:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.animated-stack:hover {
+  border-color: #ff6b6b;
+}
+
+.animated-queue:hover {
+  border-color: #54a0ff;
+}
+
+/* Stack and Queue Containers */
+.stack-container, .queue-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.stack-gif, .queue-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: 0;
+  border-radius: 10px;
+}
+
+/* Label for Visualizations */
+.visual-label {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #ffd700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Game Options */
+.game-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 250px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stack-option {
+  background: linear-gradient(45deg, #ff6b6b, #feca57);
+}
+
+.queue-option {
+  background: linear-gradient(45deg, #54a0ff, #00d2d3);
+}
+
+.game-option:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.option-icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.game-option:hover .option-icon {
+  transform: rotate(360deg);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .game-page {
+    padding: 20px 10px;
+  }
+
+  .game-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .game-visualization {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .animated-stack, .animated-queue {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .game-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .game-option {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 30px;
+  }
+}
+
+.data-structure-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+}
+
+.data-structure-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+.data-structure-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00b4db, #0083b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.data-structure-header p {
+  font-size: 1.2rem;
+  color: #a8a8a8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.data-structure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.data-structure-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.data-structure-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.data-structure-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.data-structure-card p {
+  color: #a8a8a8;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .data-structure-container {
+    padding: 1rem;
+  }
+
+  .data-structure-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .data-structure-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .data-structure-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.data-structure-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.data-structure-card:nth-child(1) { animation-delay: 0.1s; }
+.data-structure-card:nth-child(2) { animation-delay: 0.2s; }
+.data-structure-card:nth-child(3) { animation-delay: 0.3s; }
+.data-structure-card:nth-child(4) { animation-delay: 0.4s; }
+.data-structure-card:nth-child(5) { animation-delay: 0.5s; }

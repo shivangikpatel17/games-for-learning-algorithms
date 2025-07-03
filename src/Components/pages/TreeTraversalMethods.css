@@ -1,0 +1,410 @@
+.tree-traversal-visualization {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.tree-traversal-visualization-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 20px 0;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tree-traversal-visualization-header h2 {
+    font-size: 2.4em;
+    color: #2d3748;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+    text-transform: capitalize;
+    background: linear-gradient(145deg, #2d3748, #4a5568);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tree-traversal-right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.tree-traversal-visualization-content {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    min-height: 500px;
+    margin-top: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.tree-traversal-canvas-section {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 640px;
+}
+
+.tree-traversal-canvas-wrapper {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tree-traversal-canvas-wrapper canvas {
+    width: 600px !important;
+    height: 600px !important;
+}
+
+.tree-traversal-algorithm-box {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+    position: static;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.tree-traversal-algorithm-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.tree-traversal-algorithm-code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.tree-traversal-code-line {
+    padding: 2px 5px;
+    margin: 2px 0;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.tree-traversal-code-line.highlight {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.tree-traversal-sequence-box {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.tree-traversal-sequence-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.tree-traversal-sequence {
+    font-family: monospace;
+    font-size: 14px;
+    color: #666;
+    word-break: break-all;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 10px;
+    min-height: 20px;
+}
+
+.tree-traversal-sequence-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+    text-align: right;
+    font-style: italic;
+}
+
+.tree-traversal-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.tree-traversal-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.tree-traversal-buttons button {
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 120px;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #6366f1, #4f46e5);
+}
+
+.tree-traversal-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #4f46e5, #4338ca);
+}
+
+.tree-traversal-buttons button.active {
+    background: linear-gradient(145deg, #10b981, #059669);
+    box-shadow: 0 2px 4px rgba(5, 150, 105, 0.2);
+}
+
+.tree-traversal-buttons button.active:hover {
+    background: linear-gradient(145deg, #059669, #047857);
+}
+
+.tree-traversal-buttons button.generate-tree-button {
+    background: linear-gradient(145deg, #f59e0b, #d97706);
+    width: 160px;
+}
+
+.tree-traversal-buttons button.generate-tree-button:hover {
+    background: linear-gradient(145deg, #d97706, #b45309);
+}
+
+.tree-traversal-buttons button:disabled {
+    background: linear-gradient(145deg, #9ca3af, #6b7280);
+    cursor: not-allowed;
+    transform: none;
+    opacity: 0.7;
+}
+
+.tree-traversal-step-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.tree-traversal-step-buttons button {
+    padding: 12px 24px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #3b82f6, #2563eb);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tree-traversal-step-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #2563eb, #1d4ed8);
+}
+
+.tree-traversal-step-buttons button:disabled {
+    background: linear-gradient(145deg, #9ca3af, #6b7280);
+    cursor: not-allowed;
+    transform: none;
+    opacity: 0.7;
+}
+
+/* Add a subtle pulse animation for the active button */
+@keyframes subtle-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.tree-traversal-buttons button.active {
+    animation: subtle-pulse 2s infinite;
+}
+
+.tree-traversal-complexity-box {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tree-traversal-complexity-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.tree-traversal-complexity-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+.tree-traversal-complexity-box thead th {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tree-traversal-complexity-box tbody td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.tree-traversal-complexity-box tbody tr:last-child td {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tree-traversal-complexity-box tfoot td {
+    padding: 8px;
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+    color: #666;
+    background-color: #f8f9fa;
+}
+
+.tree-traversal-complexity-box tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .tree-traversal-visualization-content {
+        grid-template-columns: 1fr;
+    }
+
+    .tree-traversal-visualization-header {
+        flex-direction: column;
+    }
+
+    .tree-traversal-controls {
+        flex-direction: column;
+    }
+
+    .tree-traversal-right-section {
+        gap: 10px;
+    }
+
+    .tree-traversal-algorithm-box,
+    .tree-traversal-complexity-box {
+        min-width: 100%;
+    }
+
+    .tree-traversal-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .tree-traversal-buttons button {
+        flex: 1 1 auto;
+        min-width: 120px;
+    }
+}
+
+.tree-traversal-custom-input {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.tree-traversal-custom-input h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tree-traversal-custom-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 10px;
+}
+
+.tree-traversal-custom-input textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.tree-traversal-custom-input button {
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #6366f1, #4f46e5);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tree-traversal-custom-input button:hover {
+    background: linear-gradient(145deg, #4f46e5, #4338ca);
+    transform: translateY(-2px);
+}
+
+.tree-traversal-input-error {
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 8px;
+    background: #fee2e2;
+    border-radius: 4px;
+    border: 1px solid #fecaca;
+}
